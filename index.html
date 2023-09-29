@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="global.css">
+  <title>∆SAL'S CR | CLAN OFICIAL∆</title>
+</head>
+<body>
+  <!--  ∆HEADER∆  -->
+  <header class="main-header pt-5 flex justify-between">
+    <div class="header-pain">
+      <div class="header-clan-title uppercase text-4xl font-bold text-gray-700">Sal's cr</div>
+      <p class="header-clan-phrase text-gray-700 text-sm font-normal">Tratando de ser los mejores</p>
+    </div>
+    <div class="header-heart font-semibold text-slate-700">
+      <div id="good" class="header-bue-zzz relative before:w-10 before:h-2 before:bg-yellow-400 before:absolute before:top-2 before:left-4 before:-z-10"></div>
+      <div id="day" class="header-tar-zzz font-normal"></div>
+    </div>
+  </header>
+  
+  <!--  CONTAINER CARDS  -->
+  <section class="container-card flex w-full min-h-[80vh] items-center px-6">
+    <div class="w-full h-[60vh] bg-red-300 rounded-xl relative">
+      <div class="card-arrow-image relative -top-14">
+        <img src="arrows.image.png" alt="">
+      </div>
+      <div class="card-member-clan flex flex-col w-full h-full justify-center items-center">
+        <h1 class="members-title font-semibold text-xl uppercase text-white">Miembros del clan</h1>
+        <span class="text-slate-100">JOSFTMC</span>
+      </div>
+    </div>
+  </section>
+  
+  <!--  ∆SCRIPTS∆  -->
+  <script>
+    const good = document.querySelector("#good")
+    const times = document.querySelector("#day")
+    const date = new Date()
+    const h = date.getHours()
+    
+    if((h <= 11) && (h >= 1)) {
+      good.innerHTML = "Buenos"
+      times.innerHTML = "Días"
+    } else if((h <= 18) && (h >= 12)) {
+      good.innerHTML = "Buenas"
+      times.innerHTML = "Tardes"
+    } else if((h <= 23) && (h >= 19)) {
+      good.innerHTML = "Buenas"
+      times.innerHTML = "Noches"
+    }
+  </script>
+</body>
+</html>
